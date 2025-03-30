@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>luvmny.dev - Full Stack Developer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <header class="header">
+      <div class="container header-container">
+        <div class="header-left">
+          <a href="/" class="logo">luvmny.dev</a>
+          <nav class="main-nav">
+            <ul class="nav-list" id="glow-menu">
+              <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+              <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+              <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <button class="btn btn-outline">Resume</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section id="about" class="section">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">Full Stack Developer</h1>
+              <p class="hero-description">
+                Experienced developer with proficiency in HTML, CSS, JavaScript, Java, PHP, and SQL. Building elegant solutions to complex problems.
+              </p>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="mailto:hello@example.com" class="social-link" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
+            <!-- Projects will be dynamically inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="section">
+        <div class="container">
+          <h2 class="section-title">Tech Stack</h2>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <h3 class="tech-category">Frontend</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <h3 class="tech-category">Backend</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">PHP</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <h3 class="tech-category">Database</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">SQL</span>
+              </div>
+            </div>
+            <div class="tech-card">
+              <h3 class="tech-category">Tools & Frameworks</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">VS Code</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="contact-container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-form-container">
+              <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" name="message" class="form-textarea" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn" id="submit-btn">
+                  <span id="submit-text">Send Message</span>
+                  <span id="submit-spinner" class="spinner hidden"></span>
+                </button>
+                <p id="form-message" class="form-message"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <p class="copyright">© 2024 luvmny.dev. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Privacy</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

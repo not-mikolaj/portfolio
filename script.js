@@ -6,24 +6,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // Project data
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce platform built with Next.js, Prisma, and Stripe integration.",
+      title: "Project 1",
+      description: "Description.",
       image: "https://placehold.co/600x400/111827/ffffff",
-      link: "https://github.com",
+      link: "https://github.com/not-mikolaj?tab=repositories",
       tags: ["Next.js", "Prisma", "Stripe"],
     },
     {
-      title: "Task Management App",
-      description: "A real-time task management application with team collaboration features.",
+      title: "Project 2",
+      description: "Description.",
       image: "https://placehold.co/600x400/111827/ffffff",
-      link: "https://github.com",
+      link: "https://github.com/not-mikolaj?tab=repositories",
       tags: ["React", "Node.js", "Socket.io"],
     },
     {
-      title: "AI Chat Interface",
-      description: "An AI-powered chat interface with natural language processing capabilities.",
+      title: "Project 3",
+      description: "Description.",
       image: "https://placehold.co/600x400/111827/ffffff",
-      link: "https://github.com",
+      link: "https://github.com/not-mikolaj?tab=repositories",
       tags: ["OpenAI", "Next.js", "TailwindCSS"],
     },
   ]

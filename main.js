@@ -20,6 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("EmailJS is not loaded. Ensure it is properly included in your HTML.")
   }
 
+  // Reset loading state on page load
+  const submitSpinner = document.getElementById("submit-spinner")
+  const submitText = document.getElementById("submit-text")
+  const submitBtn = document.getElementById("submit-btn")
+  
+  // Ensure spinner is hidden on page load
+  submitSpinner.style.display = "none"
+  submitText.textContent = "Send Message"
+  submitBtn.disabled = false
+
   // Project data
   const projects = [
     {
@@ -122,9 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Contact form handling
   const contactForm = document.getElementById("contact-form")
   const formMessage = document.getElementById("form-message")
-  const submitBtn = document.getElementById("submit-btn")
-  const submitText = document.getElementById("submit-text")
-  const submitSpinner = document.getElementById("submit-spinner")
 
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -137,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Validate form data
     if (!name || !email || !message) {
       showFormMessage("Please fill in all fields.", "error")
+      setSubmitLoading(false)
       return
     }
 
@@ -191,14 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isLoading) {
       submitText.textContent = "Sending..."
-      submitSpinner.classList.remove("hidden")
+      submitSpinner.style.display = "inline-block"
     } else {
       submitText.textContent = "Send Message"
-      submitSpinner.classList.add("hidden")
+      submitSpinner.style.display = "none"
     }
-
-    // Force a repaint to ensure the UI updates
-    submitSpinner.offsetHeight
   }
 })
 

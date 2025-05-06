@@ -1,61 +1,21 @@
-// Career path data - easy to update and maintain
 const careerPath = [
   {
-    date: "2022 - Present",
-    title: "Senior Full Stack Developer",
-    organization: "Tech Innovations Inc.",
-    description:
-      "Leading development of enterprise-level web applications using modern technologies. Managing a team of 5 developers and architecting scalable solutions.",
+    date: "05/05/2025 - 30/06/2025",
+    title: "IT Helpdesk Intern",
+    organization: "Sieć Badawcza Łukasiewicz - Instytut Lotnictwa",
+    description: "Helped and maintained multiple appliences for users across the GE Aerospace Site.",
     achievements: [
-      "Reduced application load time by 40% through optimized API calls and caching strategies",
-      "Implemented CI/CD pipeline that cut deployment time by 60%",
-      "Mentored junior developers through knowledge sharing sessions",
+      "Re-enrolled 200+ company laptops to new requiered standard",
+      "Improved efficiency in accessing key intranet components for new hires",
     ],
-    skills: ["React", "Node.js", "AWS", "MongoDB", "Docker"],
-  },
-  {
-    date: "2019 - 2022",
-    title: "Full Stack Developer",
-    organization: "Digital Solutions Ltd.",
-    description: "Developed and maintained multiple web applications for clients across various industries.",
-    achievements: [
-      "Created a custom CMS that increased content management efficiency by 35%",
-      "Integrated third-party APIs reducing manual data entry by 50%",
-      "Implemented responsive designs that improved mobile conversions by 25%",
-    ],
-    skills: ["JavaScript", "PHP", "MySQL", "HTML/CSS", "REST APIs"],
-  },
-  {
-    date: "2017 - 2019",
-    title: "Front-end Developer",
-    organization: "Web Creators Co.",
-    description: "Specialized in creating responsive and accessible user interfaces for client websites.",
-    achievements: [
-      "Rebuilt company website increasing organic traffic by 28%",
-      "Developed reusable component library reducing development time",
-      "Implemented A/B testing framework for conversion optimization",
-    ],
-    skills: ["HTML", "CSS", "JavaScript", "Sass", "UI/UX"],
-  },
-  {
-    date: "2015 - 2017",
-    title: "Junior Web Developer",
-    organization: "StartUp Ventures",
-    description: "Assisted in development of web applications and learned fundamental web technologies.",
-    achievements: [
-      "Contributed to front-end development of 5 client projects",
-      "Learned and implemented responsive design principles",
-      "Created interactive prototypes for client presentations",
-    ],
-    skills: ["HTML", "CSS", "JavaScript", "jQuery"],
-  },
+    skills: ["Windows", "Azure", "Networking", "HTML/CSS"],
+  }
 ]
 
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize EmailJS
-  // Replace with your own EmailJS public key
   if (typeof emailjs !== "undefined") {
-    emailjs.init("YOUR_PUBLIC_KEY")
+    emailjs.init("8Oac1gclz1MihcVxE")
   } else {
     console.error("EmailJS is not loaded. Ensure it is properly included in your HTML.")
   }
@@ -63,25 +23,25 @@ document.addEventListener("DOMContentLoaded", () => {
   // Project data
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce platform built with Next.js, Prisma, and Stripe integration.",
+      title: "Project 1",
+      description: "Description.",
       image: "https://placehold.co/600x400/111827/ffffff",
       link: "https://github.com",
-      tags: ["Next.js", "Prisma", "Stripe"],
+      tags: ["TAG1", "TAG2", "TAG3"],
     },
     {
-      title: "Task Management App",
-      description: "A real-time task management application with team collaboration features.",
+      title: "Project 2",
+      description: "Description.",
       image: "https://placehold.co/600x400/111827/ffffff",
       link: "https://github.com",
-      tags: ["React", "Node.js", "Socket.io"],
+      tags: ["TAG1", "TAG2", "TAG3"],
     },
     {
-      title: "AI Chat Interface",
-      description: "An AI-powered chat interface with natural language processing capabilities.",
+      title: "Project 3",
+      description: "Description.",
       image: "https://placehold.co/600x400/111827/ffffff",
       link: "https://github.com",
-      tags: ["OpenAI", "Next.js", "TailwindCSS"],
+      tags: ["TAG1", "TAG2", "TAG3"],
     },
   ]
 
@@ -192,10 +152,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Send email using EmailJS
-    // Replace with your own EmailJS service ID and template ID
     if (typeof emailjs !== "undefined") {
       emailjs
-        .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+        .send("service_2xizqfm", "template_674tgej", templateParams)
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text)
@@ -297,14 +256,4 @@ function debugFormSubmission() {
   }
 }
 
-// Add this to window for easy console access
 window.debugFormSubmission = debugFormSubmission
-
-// Update any references to the domain in JavaScript
-// For example, if there are any hardcoded email addresses or URLs
-
-// If you have any email addresses like hello@luvmny.dev, change them to hello@wojtowicz.dev
-// If you have any URLs like https://luvmny.dev, change them to https://wojtowicz.dev
-
-// Note: I don't see any direct references to the domain in the script.js file,
-// but if you add any in the future, remember to use wojtowicz.dev

@@ -1,4 +1,4 @@
-# Portfolio Website
+# Portfolio Website for wojtowicz.dev
 
 A simple, responsive portfolio website built with HTML, CSS, and JavaScript.
 
@@ -8,6 +8,7 @@ A simple, responsive portfolio website built with HTML, CSS, and JavaScript.
 - Dark theme with white accents
 - Project showcase section
 - Tech stack display
+- Interactive career path timeline
 - Contact form with EmailJS integration
 - Smooth scrolling and navigation
 
@@ -33,5 +34,20 @@ Create a template in EmailJS with the following variables:
 
 - Edit the projects array in `script.js` to showcase your own projects
 - Update the tech stack in `index.html` to reflect your skills
+- Modify the career path data in `script.js` to display your own career history
 - Modify the styling in `styles.css` to match your preferences
 
+### Updating the Career Path
+
+The career path timeline is designed to be easy to update and maintain. To add or modify career items:
+
+1. Open `script.js`
+2. Find the `careerPath` array near the top of the file
+3. Edit, add, or remove career objects as needed
+4. Each career object requires the following properties:
+   - `date`: The timeframe (e.g., "2019 - 2022")
+   - `title`: Your job title
+   - `organization`: Company or organization name
+   - `description`: Brief description of your role
+   - `achievements`: Array of key achievements (bullet points)
+   - `skills`: Array of skills/technologies used

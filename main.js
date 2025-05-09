@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Project data
   const projects = [
     {
-      title: "Project 1",
-      description: "Description.",
-      image: "https://placehold.co/600x400/111827/ffffff",
-      link: "https://github.com",
-      tags: ["TAG1", "TAG2", "TAG3"],
+      title: "SEP Revision Test",
+      description: "Created a simple web page to revise for the SEP Certification as well as implemented a dark mode due to not finding simmilar resources online.",
+      image: "./images/SEP.jpeg",
+      link: "https://github.com/not-mikolaj/SEP",
+      tags: ["HTML", "CSS", "JavaScript"],
     },
     {
       title: "Project 2",
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projectCard.innerHTML = `
       <div class="project-image">
-        <img src="${project.image}" alt="${project.title}">
+        <img src="${project.image}" alt="${project.title}" width="600" height="400" style="object-fit: cover; padding: 2px;">
       </div>
       <div class="project-content">
         <h3 class="project-title">${project.title}</h3>

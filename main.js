@@ -2,7 +2,7 @@ const careerPath = [
   {
     date: "05/05/2025 - 30/06/2025",
     title: "IT Helpdesk Intern",
-    organization: "Sieć Badawcza Łukasiewicz - Instytut Lotnictwa",
+    organization: "GE Aerospace Poland Sp. z o.o.",
     description: "Helped and maintained multiple appliences for users across the GE Aerospace Site.",
     achievements: [
       "Re-enrolled 200+ company laptops to new requiered standard",

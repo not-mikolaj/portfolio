@@ -3,6 +3,7 @@ const careerPath = [
     date: "05/05/2025 - 30/06/2025",
     title: "IT Helpdesk Intern",
     organization: "GE Aerospace Poland Sp. z o.o.",
+    logo: "https://tinyurl.com/ge-logo",
     description: "Helped and maintained multiple appliences for users across the GE Aerospace Site.",
     achievements: [
       "Re-enrolled 200+ company laptops to new requiered standard",
@@ -225,7 +226,10 @@ function renderCareerTimeline() {
       <div class="timeline-content">
         <div class="timeline-date">${item.date}</div>
         <h3 class="timeline-title">${item.title}</h3>
-        <div class="timeline-organization">${item.organization}</div>
+        <div class="timeline-organization">
+          <img src="${item.logo}" alt="${item.organization} logo" style="height: 24px; margin-right: 4px; padding-bottom: 3px; padding-left: 5px; vertical-align: middle;">
+          ${item.organization}
+        </div>
         <p>${item.description}</p>
         <div class="timeline-details">
           <h4 style="margin-bottom: 8px; font-size: 0.9rem;">Key Achievements:</h4>

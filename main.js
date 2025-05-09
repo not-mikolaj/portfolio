@@ -3,7 +3,7 @@ const careerPath = [
     date: "05/05/2025 - 30/06/2025",
     title: "IT Helpdesk Intern",
     organization: "GE Aerospace Poland Sp. z o.o.",
-    logo: "https://tinyurl.com/ge-logo",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/General_Electric_logo.svg",
     description: "Helped and maintained multiple appliences for users across the GE Aerospace Site.",
     achievements: [
       "Re-enrolled 200+ company laptops to new requiered standard",

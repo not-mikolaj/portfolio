@@ -14,6 +14,45 @@ const careerPath = [
 ]
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Custom cursor
+  const cursor = document.querySelector(".cursor");
+  const cursorFollower = document.querySelector(".cursor-follower");
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+    
+    // Add a slight delay to the follower for a smooth effect
+    setTimeout(() => {
+      cursorFollower.style.left = e.clientX + "px";
+      cursorFollower.style.top = e.clientY + "px";
+    }, 50);
+  });
+
+  // Hide cursor when leaving the window
+  document.addEventListener("mouseleave", () => {
+    cursor.style.display = "none";
+    cursorFollower.style.display = "none";
+  });
+
+  document.addEventListener("mouseenter", () => {
+    cursor.style.display = "block";
+    cursorFollower.style.display = "block";
+  });
+
+  // Handle interactive elements
+  const interactiveElements = document.querySelectorAll('a, button, .nav-link, .social-link, .project-card, .tech-card, input, textarea');
+  
+  interactiveElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+      cursor.classList.add('active');
+    });
+    
+    element.addEventListener('mouseleave', () => {
+      cursor.classList.remove('active');
+    });
+  });
+
   // Initialize EmailJS
   if (typeof emailjs !== "undefined") {
     emailjs.init("8Oac1gclz1MihcVxE")

@@ -9,7 +9,12 @@ const careerPath = [
       "Re-enrolled 200+ company laptops to new requiered standard",
       "Improved efficiency in accessing key intranet components for new hires",
     ],
-    skills: ["Windows", "Azure", "Networking", "HTML/CSS"],
+    skills: [
+      { name: "Windows", icon: "fab fa-windows" },
+      { name: "Azure", icon: "fab fa-microsoft" },
+      { name: "Networking", icon: "fas fa-network-wired" },
+      { name: "HTML/CSS", icon: "fab fa-html5" }
+    ],
   }
 ]
 
@@ -77,21 +82,31 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Created a simple web page to revise for the SEP Certification as well as implemented a dark mode due to not finding simmilar resources online.",
       image: "./images/SEP.jpeg",
       link: "https://github.com/not-mikolaj/SEP",
-      tags: ["HTML", "CSS", "JavaScript"],
+      tags: [
+        { name: "HTML", icon: "fab fa-html5" },
+        { name: "CSS", icon: "fab fa-css3-alt" },
+        { name: "JavaScript", icon: "fab fa-js" }
+      ],
     },
     {
       title: "Project 2",
       description: "Description.",
       image: "https://placehold.co/600x400/111827/ffffff",
       link: "https://github.com",
-      tags: ["TAG1", "TAG2", "TAG3"],
+      tags: [
+        { name: "Java", icon: "fab fa-java" },
+        { name: "SQL", icon: "fas fa-database" }
+      ],
     },
     {
       title: "Project 3",
       description: "Description.",
       image: "https://placehold.co/600x400/111827/ffffff",
       link: "https://github.com",
-      tags: ["TAG1", "TAG2", "TAG3"],
+      tags: [
+        { name: "PHP", icon: "fab fa-php" },
+        { name: "MySQL", icon: "fas fa-database" }
+      ],
     },
   ]
 
@@ -110,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3 class="project-title">${project.title}</h3>
         <p class="project-description">${project.description}</p>
         <div class="project-tags">
-          ${project.tags.map((tag) => `<span class="project-tag">${tag}</span>`).join("")}
+          ${project.tags.map((tag) => `<span class="project-tag"><i class="${tag.icon}"></i> ${tag.name}</span>`).join("")}
         </div>
       </div>
       <div class="project-footer" style="padding: 0 1rem 1rem;">
@@ -257,7 +272,9 @@ function renderCareerTimeline() {
 
     timelineItem.className = isEven ? "timeline-item timeline-item-left" : "timeline-item timeline-item-right"
 
-    const skillsHTML = item.skills.map((skill) => `<span class="timeline-skill">${skill}</span>`).join("")
+    const skillsHTML = item.skills.map((skill) => 
+      `<span class="timeline-skill"><i class="${skill.icon}"></i> ${skill.name}</span>`
+    ).join("")
 
     const achievementsHTML = item.achievements.map((achievement) => `<li>${achievement}</li>`).join("")
 

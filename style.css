@@ -406,10 +406,22 @@ body {
   border-radius: var(--radius-md);
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-primary);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 0.5rem;
+}
+
+.project-tag i {
+  font-size: 1rem;
+  width: 1rem;
+  text-align: center;
+}
+
+.project-tag:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .project-link {
@@ -509,6 +521,11 @@ body {
   font-size: 1rem;
   width: 1rem;
   text-align: center;
+}
+
+.tech-tag:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Contact section */
@@ -779,10 +796,22 @@ body {
   border-radius: var(--radius-md);
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-primary);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
   padding: 0.25rem 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 0.5rem;
+}
+
+.timeline-skill i {
+  font-size: 1rem;
+  width: 1rem;
+  text-align: center;
+}
+
+.timeline-skill:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive adjustments */

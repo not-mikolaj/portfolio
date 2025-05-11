@@ -47,6 +47,16 @@ This site is deployed on Cloudflare Pages. The deployment process is automated:
 2. Cloudflare Pages automatically builds and deploys the site
 3. Site is available at https://wojtowicz.dev
 
+### Cloudflare Pages Configuration
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: `.`
+- Build system version: 1
+- Node.js version: 18
+- npm version: 9
+- Compatibility flags: `nodejs_compat`, `vite_compat`
+
 ## Project Structure
 
 ```
@@ -58,13 +68,16 @@ src/
 │   ├── Cursor.vue
 │   ├── Projects.vue
 │   └── Section.vue
-├── App.vue            # Main application component
-├── main.js           # Application entry point
-└── style.css         # Global styles
+├── assets/            # Static assets
+│   └── SEP.jpeg      # Project images
+├── App.vue           # Main application component
+├── main.js          # Application entry point
+└── style.css        # Global styles
 ```
 
-## Environment
+## Configuration Files
 
-- Node.js 18
-- npm 9
-- Cloudflare Pages Build System Version 1
+- `vite.config.js`: Vite build configuration
+- `cloudflare.toml`: Cloudflare Pages configuration
+- `_headers`: Security headers configuration
+- `_redirects`: SPA routing configuration

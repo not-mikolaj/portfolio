@@ -88,6 +88,37 @@ The site is deployed on Cloudflare Pages. The deployment process is automated:
    - Deploys to the global CDN
 3. Site is available at https://wojtowicz.dev
 
+### Cloudflare Pages Configuration
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: `.`
+- Build system version: 1
+- Node.js version: 18
+- npm version: 9
+- Compatibility flags: `nodejs_compat`, `vite_compat`
+
+### Configuration Files
+
+- `vite.config.js`: Vite build configuration
+  - Base URL: `./` (relative paths)
+  - Output directory: `dist`
+  - Asset handling configuration
+
+- `cloudflare.toml`: Cloudflare Pages configuration
+  - Build settings
+  - Environment variables
+  - SPA routing
+
+- `_headers`: Security headers
+  - Content Security Policy
+  - CORS settings
+  - Other security headers
+
+- `_redirects`: SPA routing
+  - All routes redirect to index.html
+  - 200 status code for SPA support
+
 ### Local Development
 
 ```bash

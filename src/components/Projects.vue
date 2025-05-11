@@ -49,7 +49,7 @@ export default {
           title: "SEP Revision Test",
           description:
             "Created a simple web page to revise for the SEP Certification as well as implemented a dark mode due to not finding simmilar resources online.",
-          image: "./images/SEP.jpeg",
+          image: new URL("../assets/SEP.jpeg", import.meta.url).href,
           link: "https://github.com/not-mikolaj/SEP",
           tags: [
             { name: "HTML", icon: "fab fa-html5" },

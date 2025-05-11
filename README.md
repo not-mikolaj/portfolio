@@ -62,3 +62,9 @@ src/
 ├── main.js           # Application entry point
 └── style.css         # Global styles
 ```
+
+## Environment
+
+- Node.js 18
+- npm 9
+- Cloudflare Pages Build System Version 1

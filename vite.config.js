@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/', // Cloudflare Pages uses root path
+  base: './', // Change to relative path for better compatibility
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

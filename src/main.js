@@ -9,4 +9,5 @@ if (typeof emailjs !== "undefined") {
   console.error("EmailJS is not loaded. Ensure it is properly included in your HTML.")
 }
 
-createApp(App).mount('#app') 
+const app = createApp(App)
+app.mount('#app') 

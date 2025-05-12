@@ -25,7 +25,9 @@
             </ul>
           </nav>
         </div>
-        <a href="/resume/resume.pdf" target="_blank" class="btn btn-outline">Resume</a>
+        <a href="/resume/resume.pdf" target="_blank" class="btn btn-outline">
+          <i class="fas fa-file-alt"></i>&nbsp;Resume
+        </a>
         <button 
           class="mobile-menu-btn" 
           @click="toggleMobileMenu"

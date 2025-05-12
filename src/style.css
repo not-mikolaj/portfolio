@@ -47,14 +47,14 @@
   transition: transform 0.4s ease, width 0.3s ease, height 0.3s ease;
 }
 
-/* Cursor states */
+/* Remove cursor scaling effects */
 a:hover ~ .cursor,
 button:hover ~ .cursor,
 .nav-link:hover ~ .cursor,
 .social-link:hover ~ .cursor,
 .project-card:hover ~ .cursor,
 .tech-card:hover ~ .cursor {
-  transform: scale(1.5);
+  transform: none;
 }
 
 a:hover ~ .cursor-follower,
@@ -63,8 +63,8 @@ button:hover ~ .cursor-follower,
 .social-link:hover ~ .cursor-follower,
 .project-card:hover ~ .cursor-follower,
 .tech-card:hover ~ .cursor-follower {
-  transform: scale(1.5);
-  background: rgba(255, 255, 255, 0.2);
+  transform: none;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Base styles */

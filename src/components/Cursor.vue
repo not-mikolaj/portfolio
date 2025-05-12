@@ -54,13 +54,11 @@ export default {
 
       interactiveElements.forEach((element) => {
         element.addEventListener("mouseenter", () => {
-          cursor.classList.add("active");
-          cursorFollower.classList.add("active");
+          // Remove active state classes
         });
 
         element.addEventListener("mouseleave", () => {
-          cursor.classList.remove("active");
-          cursorFollower.classList.remove("active");
+          // Remove active state classes
         });
       });
     }

@@ -7,7 +7,9 @@ A modern, responsive portfolio website built with Vue.js and Vite.
 - Single-page application with smooth section transitions
 - Responsive design that works on all devices
 - Dark theme with white accents
-- Custom cursor with interactive states
+- Custom cursor with interactive states (desktop only)
+- Touch-based navigation for mobile devices
+- Mobile-optimized navigation menu
 - Project showcase section with tech stack tags
 - Interactive tech stack display with icons
 - Interactive career path timeline with skill tags
@@ -15,6 +17,7 @@ A modern, responsive portfolio website built with Vue.js and Vite.
 - Smooth scrolling and navigation
 - Font Awesome icons integration
 - Interactive hover effects and animations
+- Touch device detection and optimization
 
 ## Technologies Used
 
@@ -60,24 +63,3 @@ This site is deployed on Cloudflare Pages. The deployment process is automated:
 ## Project Structure
 
 ```
-src/
-├── components/         # Vue components
-│   ├── About.vue
-│   ├── Career.vue
-│   ├── Contact.vue
-│   ├── Cursor.vue
-│   ├── Projects.vue
-│   └── Section.vue
-├── assets/            # Static assets
-│   └── SEP.jpeg      # Project images
-├── App.vue           # Main application component
-├── main.js          # Application entry point
-└── style.css        # Global styles
-```
-
-## Configuration Files
-
-- `vite.config.js`: Vite build configuration
-- `cloudflare.toml`: Cloudflare Pages configuration
-- `_headers`: Security headers configuration
-- `_redirects`: SPA routing configuration

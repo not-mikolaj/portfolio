@@ -7,7 +7,7 @@ The website is built with Vue.js 3 and uses a component-based architecture:
 ### Main Components
 - `App.vue`: Main application component
 - `Section.vue`: Reusable section component with transition effects
-- `Cursor.vue`: Custom cursor implementation
+- `Cursor.vue`: Custom cursor implementation with touch device detection
 - `About.vue`: About section content
 - `Projects.vue`: Projects showcase
 - `Career.vue`: Career timeline
@@ -24,10 +24,34 @@ The website features a custom cursor with interactive states. The cursor consist
 - A small dot (6px) that follows the mouse precisely
 - A larger follower circle (24px) that follows with a slight delay
 - Interactive states that make the cursor grow on hoverable elements
+- Touch device detection to disable cursor on mobile devices
 
 To modify the cursor:
 1. Edit cursor styles in `src/components/Cursor.vue`
 2. Adjust cursor behavior in the component's mounted hook
+3. Update interactive element selectors as needed
+
+## Mobile Responsiveness
+
+The website is fully responsive with mobile-specific features:
+- Touch-based navigation with swipe gestures
+- Mobile-optimized navigation menu
+- Responsive layouts for all sections
+- Touch-friendly interactive elements
+- Safe area insets for modern mobile browsers
+
+### Mobile Menu
+The mobile menu can be toggled with a hamburger button and includes:
+- Smooth animations
+- Backdrop overlay
+- Accessible navigation
+- Touch-friendly targets
+
+### Touch Navigation
+- Swipe up/down to navigate sections
+- Minimum swipe distance: 50px
+- Maximum swipe time: 300ms
+- Smooth transitions between sections
 
 ## Tech Stack and Icons
 

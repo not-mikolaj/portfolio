@@ -835,4 +835,69 @@ body {
   .timeline-item-right::after {
     left: 20px;
   }
+
+  .timeline-details {
+    max-height: none;
+    opacity: 1;
+    margin-top: 12px;
+  }
+
+  /* Improve touch targets */
+  .nav-link,
+  .btn,
+  .social-link,
+  .project-link {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Adjust spacing for mobile */
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Improve project cards on mobile */
+  .project-card {
+    margin-bottom: 1rem;
+  }
+
+  .project-image {
+    aspect-ratio: 16/9;
+  }
+
+  /* Improve form elements on mobile */
+  .form-input,
+  .form-textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+    padding: 0.75rem;
+  }
+
+  /* Improve button touch targets */
+  .submit-btn {
+    min-height: 44px;
+  }
+
+  /* Add pull-to-refresh prevention */
+  body {
+    overscroll-behavior-y: none;
+  }
+}
+
+/* Add safe area insets for modern mobile browsers */
+@supports (padding: max(0px)) {
+  .header {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+  
+  .footer {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
 }

@@ -2,8 +2,32 @@
 command = "npm run build"
 publish = "dist"
 
-[build.environment]
-NODE_VERSION = "18"
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+# Security rules for DDoS protection and bot mitigation
+[security]
+# Enable Cloudflare's DDoS protection
+ddos_protection = true
+
+# Enable bot management
+bot_management = true
+
+# Rate limiting rules
+[security.rate_limits]
+# Limit requests to 100 per minute per IP
+rate_limit = "100/minute"
+# Block IPs that exceed the rate limit for 10 minutes
+block_duration = "10m"
+
+# Additional security headers
+[security.headers]
+# Enable HSTS
+hsts = true
+# Enable XSS protection
+xss_protection = true
+# Enable Content Security Policy
+csp = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self';"
 
 [[redirects]]
 from = "/*"

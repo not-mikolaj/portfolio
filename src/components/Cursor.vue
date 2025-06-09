@@ -12,11 +12,12 @@ export default {
     }
   },
   mounted() {
-    // Check if device is touch-enabled
+    // Check if device is touch-enabled with improved detection
     this.isTouchDevice = (
       'ontouchstart' in window || 
       navigator.maxTouchPoints > 0 || 
-      navigator.msMaxTouchPoints > 0
+      navigator.msMaxTouchPoints > 0 ||
+      window.matchMedia('(pointer: coarse)').matches
     );
     
     if (!this.isTouchDevice) {
@@ -30,6 +31,7 @@ export default {
         cursor.style.left = e.clientX + "px";
         cursor.style.top = e.clientY + "px";
 
+        // Add a slight delay to the follower for a smooth effect
         setTimeout(() => {
           cursorFollower.style.left = e.clientX + "px";
           cursorFollower.style.top = e.clientY + "px";
@@ -45,21 +47,6 @@ export default {
       document.addEventListener("mouseenter", () => {
         cursor.style.display = "block";
         cursorFollower.style.display = "block";
-      });
-
-      // Handle interactive elements
-      const interactiveElements = document.querySelectorAll(
-        "a, button, .nav-link, .social-link, .project-card, .tech-card, input, textarea"
-      );
-
-      interactiveElements.forEach((element) => {
-        element.addEventListener("mouseenter", () => {
-          // Remove active state classes
-        });
-
-        element.addEventListener("mouseleave", () => {
-          // Remove active state classes
-        });
       });
     }
   },
@@ -81,7 +68,6 @@ export default {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
-  transition: transform 0.2s ease;
 }
 
 .cursor-follower {
@@ -93,36 +79,14 @@ export default {
   position: fixed;
   pointer-events: none;
   z-index: 9998;
-  transition: transform 0.6s ease, width 0.3s ease, height 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
-/* Update cursor active states */
-.cursor.active {
-  transform: scale(1.5); /* Make dot bigger instead of disappearing */
-  background: #fff; /* Keep the dot visible */
-}
-
-.cursor-follower.active {
-  transform: scale(1.2);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-  width: 40px; /* Make follower bigger on interactive elements */
-  height: 40px;
-}
-
-/* Add specific styles for form elements */
-input:hover ~ .cursor,
-textarea:hover ~ .cursor {
-  transform: scale(1.5);
-  background: #fff;
-}
-
-input:hover ~ .cursor-follower,
-textarea:hover ~ .cursor-follower {
-  transform: scale(1.2);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-  width: 40px;
-  height: 40px;
+/* Add hardware acceleration hints */
+@media (prefers-reduced-motion: no-preference) {
+  .cursor,
+  .cursor-follower {
+    will-change: transform;
+  }
 }
 </style>

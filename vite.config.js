@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: './', // Change to relative path for better compatibility
+  base: '/', // Change back to absolute path
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -19,5 +19,6 @@ export default defineConfig({
   server: {
     port: 3000,
     strictPort: true
-  }
+  },
+  publicDir: 'public' // Explicitly set public directory
 }) 
